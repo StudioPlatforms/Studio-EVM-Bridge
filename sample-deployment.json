@@ -1,0 +1,28 @@
+{
+  "network": "studio",
+  "chainId": 240241,
+  "rateLimiter": "0xEf66f88082c592F30357AB648CA0d4e26b009A46",
+  "bridge": "0x7FD526dC3d193a3dA6C330956813A6B358BCA1Ff",
+  "erc20Handler": "0xEedf1D452489cc1044423fFd847c33E26E7C55A2",
+  "erc20HandlerFixed": "0xCBb0CdF4D9a4A14d031A66De6aDB4bFC2141FFB7",
+  "nativeHandler": "0x4f2d6370fcB10613D0c44C6C46060e0a813257c7",
+  "resources": {
+    "usdt": {
+      "resourceID": "0x8b1a1d9c2b109e527c9134b25b1a1833b16b6594f92daa9f6d9b7a6024bce9d0",
+      "tokenAddress": "0x0000000000000000000000000000000000000000"
+    },
+    "native": {
+      "resourceID": "0xbefae8b7ff926e5ec4428d291aa6cb21f134a3e9f02ace30ff61c382a104c57f",
+      "tokenAddress": "0x0000000000000000000000000000000000000000"
+    },
+    "usdc": {
+      "resourceID": "0x9c1a1d9c2b109e527c9134b25b1a1833b16b6594f92daa9f6d9b7a6024bce9d0",
+      "tokenAddress": "0x0000000000000000000000000000000000000000"
+    },
+    "3dc": {
+      "resourceID": "0xac1a1d9c2b109e527c9134b25b1a1833b16b6594f92daa9f6d9b7a6024bce9d0",
+      "tokenAddress": "0x0000000000000000000000000000000000000000"
+    }
+  },
+  "updatedAt": "2025-04-30T13:54:00.000Z"
+}

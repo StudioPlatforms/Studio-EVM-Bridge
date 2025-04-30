@@ -1,0 +1,28 @@
+{
+  "name": "bridge-relayer",
+  "version": "1.0.0",
+  "description": "Relayer service for the EVM bridge",
+  "main": "index.js",
+  "scripts": {
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "dev": "ts-node index.ts"
+  },
+  "dependencies": {
+    "axios": "^1.8.4",
+    "dotenv": "^16.4.5",
+    "ethers": "^6.11.1",
+    "nodemailer": "^6.10.0",
+    "solc": "^0.8.5"
+  },
+  "devDependencies": {
+    "@nomicfoundation/hardhat-ethers": "^3.0.8",
+    "@nomicfoundation/hardhat-toolbox": "^5.0.0",
+    "@nomicfoundation/hardhat-verify": "^2.0.13",
+    "@types/node": "^20.11.24",
+    "@types/nodemailer": "^6.4.17",
+    "truffle-flattener": "^1.6.0",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.3.3"
+  }
+}
