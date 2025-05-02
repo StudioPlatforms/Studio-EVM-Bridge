@@ -43,20 +43,22 @@ export interface MultiChainRelayerConfig {
 }
 
 // Load private key from environment variable
-const privateKey = process.env.PRIVATE_KEY || 'YOUR_PRIVATE_KEY_HERE';
+// Relayer address: --the relayer address--
+const privateKey = process.env.PRIVATE_KEY || ''; // New relayer private key will be set via environment variable
 
 const config: MultiChainRelayerConfig = {
   chains: [
     {
       name: 'STUDIO',
       chainId: 240241,
-      rpcUrl: process.env.STUDIO_RPC_URL || 'https://mainnet2.studio-blockchain.com',
+      rpcUrl: 'https://mainnet.studio-blockchain.com',
       fallbackRpcUrls: [
+        'https://mainnet2.studio-blockchain.com',
         'https://mainnet3.studio-blockchain.com',
         'https://mainnet.studio-scan.com',
         'https://mainnet2.studio-scan.com'
       ],
-      bridgeAddress: '0x7FD526dC3d193a3dA6C330956813A6B358BCA1Ff', // Studio bridge address
+      bridgeAddress: '--the bridge address-', // Studio bridge address
       privateKey: privateKey,
       startBlockOffset: 1000,
       deepScanBlocks: 10000,
@@ -65,9 +67,9 @@ const config: MultiChainRelayerConfig = {
     {
       name: 'BSC',
       chainId: 56,
-      rpcUrl: process.env.BSC_RPC_URL || 'https://bsc-dataseed.binance.org/',
+      rpcUrl: '--the-rpc-url--',
       fallbackRpcUrls: [], // Empty array to indicate no fallbacks
-      bridgeAddress: '0x1806d6109E9898A57e1Df9852A05B6d03Fc85Ffd', // BSC bridge address
+      bridgeAddress: '--the-bridge--address', // Updated BSC bridge address
       privateKey: privateKey,
       startBlockOffset: 5000,
       deepScanBlocks: 20000,
@@ -80,7 +82,7 @@ const config: MultiChainRelayerConfig = {
   saveStateInterval: 300000, // 5 minutes in ms
   // STO gas provider configuration
   stoGasProvider: {
-    privateKey: process.env.STO_GAS_PROVIDER_KEY || 'YOUR_STO_GAS_PROVIDER_KEY_HERE',
+    privateKey: '--gas-provider-private-key--',
     amount: '0.001', // Amount of STO to send to users
     enabled: true
   },
@@ -90,8 +92,8 @@ const config: MultiChainRelayerConfig = {
     sendmail: true, // Use sendmail transport
     newline: 'unix', // Unix-style newlines
     path: '/usr/sbin/sendmail', // Default path to sendmail
-    from: process.env.EMAIL_FROM || 'your-email@example.com', // Sender email address
-    to: process.env.EMAIL_TO || 'recipient@example.com', // Recipient email address
+    from: '--your-email--', // Sender email address
+    to: '--your-email--', // Recipient email address
     alertCooldown: 3600000 // 1 hour cooldown between alerts for the same issue
   }
 };
